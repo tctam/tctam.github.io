@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="snowball" ng-cloak>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="bower_components/ngstorage/ngStorage.js"></script>
+    <script type="text/javascript" src="bower_components/moment/moment.js"></script>
+
+    <script type="text/javascript" src="libs/jquery.mobile.custom.js"></script>
+
+    <!--  Run main.js -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="js/services/snowballService.js"></script>
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="js/controllers/homeController.js"></script>
+    <script type="text/javascript" src="js/controllers/detailController.js"></script>
+
+    <!-- Filters -->
+    <script type="text/javascript" src="js/filters/lastAccessFilter.js"></script>
+    <script type="text/javascript" src="js/filters/hashtagsFilter.js"></script>
+
+    <!-- Directives -->
+    <script type="text/javascript" src="js/directives/slideShowDirective.js"></script>
+    <script type="text/javascript" src="js/directives/hashtagDirective.js"></script>
+    <script type="text/javascript" src="js/directives/showVideoDirective.js"></script>
+</head>
+<body>
+<div ui-view=""></div>
+</body>
+<script>
+    $(document).ready(function () {
+        moment().format();
+    });
+</script>
+</html>
