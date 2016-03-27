@@ -8,6 +8,7 @@
     "ngstorage": "~0.3.7",
     "fontawesome": "~4.3.0",
     "bootstrap": "^3.3.6",
-    "moment": "^2.12.0"
+    "moment": "^2.12.0",
+    "slick-carousel": "^1.5.9"
   }
 }

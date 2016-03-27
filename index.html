@@ -2,8 +2,10 @@
 <html ng-app="snowball" ng-cloak>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
 
     <style>
         [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -11,32 +13,33 @@
         }
     </style>
 
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script type="text/javascript" src="bower_components/ngstorage/ngStorage.js"></script>
-    <script type="text/javascript" src="bower_components/moment/moment.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
 
     <script type="text/javascript" src="libs/jquery.mobile.custom.js"></script>
+    <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
 
     <!--  Run main.js -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="minjs/main.js"></script>
 
     <!-- Services -->
-    <script type="text/javascript" src="js/services/snowballService.js"></script>
+    <script type="text/javascript" src="minjs/services/snowballService.js"></script>
 
     <!-- Controllers -->
-    <script type="text/javascript" src="js/controllers/homeController.js"></script>
-    <script type="text/javascript" src="js/controllers/detailController.js"></script>
+    <script type="text/javascript" src="minjs/controllers/homeController.js"></script>
+    <script type="text/javascript" src="minjs/controllers/detailController.js"></script>
 
     <!-- Filters -->
-    <script type="text/javascript" src="js/filters/lastAccessFilter.js"></script>
-    <script type="text/javascript" src="js/filters/hashtagsFilter.js"></script>
+    <script type="text/javascript" src="minjs/filters/lastAccessFilter.js"></script>
+    <script type="text/javascript" src="minjs/filters/hashtagsFilter.js"></script>
 
     <!-- Directives -->
-    <script type="text/javascript" src="js/directives/slideShowDirective.js"></script>
-    <script type="text/javascript" src="js/directives/hashtagDirective.js"></script>
-    <script type="text/javascript" src="js/directives/showVideoDirective.js"></script>
+    <script type="text/javascript" src="minjs/directives/slideShowDirective.js"></script>
+    <script type="text/javascript" src="minjs/directives/hashtagDirective.js"></script>
+    <script type="text/javascript" src="minjs/directives/showVideoDirective.js"></script>
 </head>
 <body>
 <div ui-view=""></div>

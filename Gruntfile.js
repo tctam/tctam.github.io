@@ -4,17 +4,27 @@
 
 module.exports = function (grunt) {
     grunt.initConfig({
-        copy: {
-            build: {
-                cwd: 'src',
-                src: ['**'],
-                dest: 'dist',
-                expand: true
-            }
-        },
         clean: {
             build: {
-                src: ['dist']
+                src: ['css/style.min.css', 'css/style.css', 'minjs']
+            }
+        },
+        less: {
+            production: {
+                files: {
+                    "css/style.css": "css/style.less"
+                }
+            }
+        },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'css',
+                    src: ['*.css'],
+                    dest: 'css',
+                    ext: '.min.css'
+                }]
             }
         },
         uglify: {
@@ -22,16 +32,20 @@ module.exports = function (grunt) {
                 options: {
                     mangle: true
                 },
-                files: {
-                    'dist/ngImageCrop.min.js': ['dist/**/*.js']
-                }
+                files: [{
+                    expand: true,
+                    src: '**/*.js',
+                    dest: 'minjs',
+                    cwd: 'js'
+                }]
             }
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('build', 'Copy, minify and uglify javascript files', ['clean', 'copy', 'uglify']);
+    grunt.registerTask('build', 'minify css and uglify javascript files', ['clean', 'less', 'cssmin', 'uglify']);
 };

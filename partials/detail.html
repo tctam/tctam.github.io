@@ -12,13 +12,13 @@
                 </div>
             </div>
         </div>
-        <div id="main-video">
-            <div id="slideshow" slide-show-directive detail="detail" on-play-click="openVideo($item, $detail)">
+        <div class="main-video">
+            <div class="slideshow" slide-show-directive detail="detail" on-play-click="openVideo($item, $detail)">
             </div>
-            <div id="slideshow-description">
+            <div class="slideshow-description">
                 To collaborate on this snowball, Eternal {{detail.snowball.user.name}}, click on the buttons below
             </div>
-            <div id="overlay">
+            <div class="overlay">
                 <div class="overlay-content">
                     <div>
                         <div><img src="../images/main/addoverlay.png"/></div>
@@ -36,8 +36,8 @@
             </div>
         </div>
     </div>
-    <div id="status">
-        <div id="tabs">
+    <div class="status">
+        <div class="tabs">
             <div class="tab-content float-left">
                 <div>
                     <div><img src="../images/status/editor.png"/></div>
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div id="hashtags" class="clear-both">
+        <div class="hashtags clear-both">
             <div class="row">
                 <div class="col-xs-9" hashtag-directive hashtags="detail.snowball.hash_tag_names"></div>
                 <div class="col-xs-3">
@@ -74,7 +74,7 @@
             </div>
 
         </div>
-        <div id="description">
+        <div class="description">
             {{detail.snowball.description}}
         </div>
     </div>

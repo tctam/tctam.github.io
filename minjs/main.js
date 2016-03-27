@@ -1,0 +1,1 @@
+"use strict";var app=angular.module("snowball",["ui.router","ngStorage"]);app.config(["$stateProvider","$urlRouterProvider",function(a,b){b.otherwise("/home"),a.state("home",{url:"/home",templateUrl:"partials/home.html",controller:"homeController"}).state("detail",{url:"/detail/:type",templateUrl:"partials/detail.html",controller:"detailController"})}]);
