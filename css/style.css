@@ -163,6 +163,7 @@ body {
   border-radius: 3px;
   background: #024976;
   padding: 5px;
+  text-align: center;
 }
 .description {
   border-top: 1px solid #177ac4;
