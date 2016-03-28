@@ -7,6 +7,7 @@ app.directive('slideShowDirective', ['snowballService', function (snowballServic
         restrict: 'ACE',
         scope: {
             'onPlayClick': '&onPlayClick',
+            'afterChange': '&afterChange',
             'detail': '=detail'
         },
         link: function (scope, element, attrs) {
@@ -96,11 +97,21 @@ app.directive('slideShowDirective', ['snowballService', function (snowballServic
                         self.slideShow.css('transform', 'scale(1)');
                     }
                     self.collapse = !self.collapse;
-                })
+                });
+
+                $(this.slideShow).on('afterChange', function (event, slick, currentSlide) {
+                    if (self.afterChangeCallback) {
+                        self.afterChangeCallback.call(self, event, slick, currentSlide);
+                    }
+                });
             }
 
             VideoSlideShow.prototype.setPlayCallback = function (callback) {
                 this.playCallback = callback;
+            }
+
+            VideoSlideShow.prototype.setAfterChangeCallback = function (callback) {
+                this.afterChangeCallback = callback;
             }
 
             scope.$watch('detail', function (newValue, oldValue) {
@@ -111,6 +122,12 @@ app.directive('slideShowDirective', ['snowballService', function (snowballServic
                         scope.$apply(function () {
                             scope.onPlayClick(data);
                         })
+                    });
+                    videoSlideShow.setAfterChangeCallback(function (event, slick, currentSlide) {
+                        var data = this.detail;
+                        scope.$apply(function () {
+                            scope.afterChange({$data: data, $index: currentSlide});
+                        });
                     })
                 }
             });

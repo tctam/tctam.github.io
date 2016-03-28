@@ -81,8 +81,8 @@ app.factory('snowballService', ['$http', '$q', function ($http, $q) {
                                     ]
                                 },
                                 "title": "the only best",
-                                "number_of_likes": 0,
-                                "number_of_views": 0
+                                "number_of_likes": 1,
+                                "number_of_views": 1
                             }
                         },
                         {
@@ -106,8 +106,8 @@ app.factory('snowballService', ['$http', '$q', function ($http, $q) {
                                     ]
                                 },
                                 "title": "the only best",
-                                "number_of_likes": 0,
-                                "number_of_views": 0
+                                "number_of_likes": 10,
+                                "number_of_views": 2
                             }
                         },
                         {
@@ -131,8 +131,8 @@ app.factory('snowballService', ['$http', '$q', function ($http, $q) {
                                     ]
                                 },
                                 "title": "the only best",
-                                "number_of_likes": 0,
-                                "number_of_views": 0
+                                "number_of_likes": 1,
+                                "number_of_views": 9
                             }
                         },
                         {
@@ -156,8 +156,8 @@ app.factory('snowballService', ['$http', '$q', function ($http, $q) {
                                     ]
                                 },
                                 "title": "the only best",
-                                "number_of_likes": 0,
-                                "number_of_views": 0
+                                "number_of_likes": 8,
+                                "number_of_views": 2
                             }
                         }
                     ]

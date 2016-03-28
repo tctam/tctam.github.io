@@ -13,7 +13,8 @@
             </div>
         </div>
         <div class="main-video">
-            <div class="slideshow" slide-show-directive detail="detail" on-play-click="openVideo($item, $detail)">
+            <div class="slideshow" slide-show-directive detail="detail"
+                 on-play-click="openVideo($item, $detail)" after-change="changeData($data, $index)">
             </div>
             <div class="slideshow-description">
                 To collaborate on this snowball, Eternal {{detail.snowball.user.name}}, click on the buttons below
@@ -55,11 +56,11 @@
             <div class="tab-content float-right">
                 <div>
                     <div><img src="../images/status/like.png"/></div>
-                    <div class="text-tab">{{detail.snowball.number_of_likes}}</div>
+                    <div class="text-tab">{{currentItem.collaboration.number_of_likes}}</div>
                 </div>
                 <div>
                     <div><img src="../images/status/forward.png"/></div>
-                    <div class="text-tab">{{detail.snowball.number_of_views}}</div>
+                    <div class="text-tab">{{currentItem.collaboration.number_of_views}}</div>
                 </div>
             </div>
         </div>
