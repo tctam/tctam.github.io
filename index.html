@@ -1,13 +1,29 @@
 <html>
 <head>
-</head>
-<body>
   <meta property="fb:app_id" content="1447501708878284" />
-  <meta property="al:ios:url" content="snowball://invite_from_fb?referral=578" />
   <meta property="al:ios:app_store_id" content="954158617" />
   <meta property="al:ios:app_name" content="Snowball'" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="website" />
-  Snowball test app link
+</head>
+<body>
 </body>
+<script>
+  window.onload = function(event){
+    var search = location.search;
+    if(search){
+      var pair = search.split('=');
+      if(pair && pair.length == 2){
+        var id = pair[1];
+
+        var iosTag = document.createElement('meta');
+        iosTag.property="al:ios:url";
+        iosTag.content = "snowball://invite_from_fb?referral=" + id;
+
+        var headElement = document.getElementsByTagName('head')[0];
+        headElement.appendChild(iosTag);
+      }
+    }
+  }
+</script>
 </html>
