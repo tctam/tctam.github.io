@@ -1,30 +1,12 @@
 <html>
 <head>
   <meta property="fb:app_id" content="1447501708878284" />
-  <script>
-    var search = location.search;
-    if(search){
-      var pair = search.split('=');
-      if(pair && pair.length == 2){
-        var id = pair[1];
-
-        var iosTag = document.createElement('meta');
-        iosTag.setAttribute('property', 'al:ios:url');
-        iosTag.setAttribute('content', "snowball://invite_from_fb?snowballId=" + id);
-
-        var headElement = document.getElementsByTagName('head')[0];
-        var firstTagElement = document.getElementsByTagName('meta')[0];
-        headElement.insertBefore(iosTag, firstTagElement.nextSibling);
-      }
-    }
-  </script>
+  <meta property="al:ios:url" content="snowball://detail?snowballId=1234567" />
   <meta property="al:ios:app_store_id" content="954158617" />
   <meta property="al:ios:app_name" content="Snowball" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Snowball - Come Together, Make Magic" />
 </head>
 <body>
-
 </body>
-
 </html>
