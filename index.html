@@ -7,6 +7,7 @@
   <meta property="og:title" content="website" />
 </head>
 <body>
+
 </body>
 <script>
   window.onload = function(event){
@@ -21,7 +22,8 @@
         iosTag.content = "snowball://invite_from_fb?referral=" + id;
 
         var headElement = document.getElementsByTagName('head')[0];
-        headElement.appendChild(iosTag);
+        var firstTagElement = document.getElementsByTagName('meta')[0];
+        headElement.insertBefore(iosTag, firstTagElement.nextSibling);
       }
     }
   }
