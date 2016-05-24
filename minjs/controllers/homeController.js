@@ -1,1 +1,0 @@
-app.controller("homeController",["$scope","$state","$stateParams",function(a,b,c){a.getPublicDetail=function(){b.go("detail",{type:"public"})},a.getDummyDetail=function(){b.go("detail",{type:"dummy"})}}]);

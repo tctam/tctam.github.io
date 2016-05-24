@@ -1,1 +1,0 @@
-app.filter("hagtagsFilter",function(){return function(a){var b="";if(a)for(var c=0;c<a.length;c++)c>0&&(b+=" "),b+="#"+a[c];return b}});

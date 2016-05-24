@@ -1,1 +1,0 @@
-app.filter("lastAccessFilter",function(){return function(a){if(a){var b=Date.parse(a);return moment(b).fromNow()}return""}});

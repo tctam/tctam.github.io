@@ -1,1 +1,0 @@
-app.directive("hashtagDirective",[function(){return{restrict:"ACE",scope:{hashtags:"=hashtags"},templateUrl:"../partials/templates/hashtags.html",link:function(a,b,c){}}}]);
